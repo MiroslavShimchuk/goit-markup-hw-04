@@ -200,6 +200,21 @@ body {
     background: #2F303A;
 }
 
+/* .hero-background {
+    height: 600px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient (
+        to right,
+        rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
 .hero-title {
     margin: 0 auto;
     width: 696px;
@@ -253,6 +268,35 @@ body {
 
 .feature-item + .feature-item {
     margin-left: 30px;
+}
+
+.feature-item::before {
+    display: block;
+    content: '';
+    height: 120px;
+    outline: 2px solid salmon;
+    
+    background: #F5F4FA;
+    border-radius: 4px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+    background-image: url();
+}
+
+.icon-clock::before {
+    background-image: url();
+}
+
+.icon-diagram::before {
+    background-image: url();
+}
+
+.icon-cpaceman::before {
+    background-image: url();
 }
 
 .feature-title {
@@ -387,7 +431,11 @@ body {
 }
 
 .footer-container {
-    margin-right: auto;
+    display: flex;
+}
+
+.footer-address-container {
+    margin-right: 70px;
 }
 
 .footer-logo-link {
@@ -427,6 +475,21 @@ body {
 .footer-contact-link:hover,
 .footer-contact-link:focus {
     color: var(--accent-color);
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-top: 72px;
+
+    color: #FFFFFF;
+}
+
+.footer-network-list {
+    display: flex;
 }
 
 /* Portfolio */
