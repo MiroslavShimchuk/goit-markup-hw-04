@@ -67,7 +67,7 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
 }
 
 .section {
@@ -178,13 +178,15 @@ body {
 }
 
 .header-contact-link {
-    display: block;
+    display: flex;
     text-decoration-line: none;
     color: var(--text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-contact-link:hover,
@@ -192,28 +194,32 @@ body {
     color: var(--accent-color);
 }
 
+.navigation-icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.navigation-icon:hover,
+.navigation-icon:focus {
+    fill: currentColor;
+}
+
 /* Герой */
 
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background: #2F303A;
-    background-image: url(../images/hero-bg.jpg);
-}
-
-/* .hero-background {
+    background-color: #2F303A;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
     height: 600px;
     max-width: 1600px;
     margin: 0 auto;
-    background-image: linear-gradient (
-        to right,
-        rgba(47, 48, 58, 0.4)
-        ),
-        url('../images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-} */
+}
 
 .hero-title {
     margin: 0 auto;
@@ -270,33 +276,15 @@ body {
     margin-left: 30px;
 }
 
-.feature-item::before {
-    display: block;
-    content: '';
+.feature-icon-container {
+    display: flex;
+    width: 100%;
     height: 120px;
-    outline: 2px solid salmon;
-    
-    background: #F5F4FA;
+    background-color: #F5F4FA;
     border-radius: 4px;
-    background-size: contain;
-    background-repeat: no-repeat;
     margin-bottom: 30px;
-}
-
-.icon-antenna::before {
-    background-image: url();
-}
-
-.icon-clock::before {
-    background-image: url();
-}
-
-.icon-diagram::before {
-    background-image: url();
-}
-
-.icon-cpaceman::before {
-    background-image: url();
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-title {
@@ -403,12 +391,75 @@ body {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.team-social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team-social-item {
+    width: 44px;
+    height: 44px;
+}
+
+.team-social-item+.team-social-item {
+    margin-left: 10px;
+}
+
+.team-social-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #AFB1B8;
+    margin-bottom: 30px;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: #2196F3;
+    fill: #FFFFFF;
 }
 
 /* Постоянные клиенты */
 
 .customers {
-    background-color: teal;
+    background-color: #FFFFFF;
+}
+
+.customers-list {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.customers-item {
+    width: 170px;
+    height: 92px;
+    box-sizing: border-box;
+}
+
+.customers-item+.customers-item {
+    margin-left: 30px;
+}
+
+.customers-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    fill: #AFB1B8;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border-color: #2196F3;
+    fill: #2196F3;
 }
 
 .customers-title {
@@ -425,9 +476,11 @@ body {
 /* Футер */
 
 .footer {
+    background-color: var(--second-background-color);
+}
+.footer-address-container {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: var(--second-background-color);
 }
 
 .footer-container {
@@ -477,19 +530,50 @@ body {
     color: var(--accent-color);
 }
 
+.footer-container-network {
+    padding-top: 72px;
+    padding-bottom: 100px;
+}
+
 .footer-title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-top: 72px;
+    margin-bottom: 20px;
 
     color: #FFFFFF;
 }
 
-.footer-network-list {
+.footer-social-list {
     display: flex;
+}
+
+.footer-social-item {
+    width: 44px;
+    height: 44px;  
+}
+
+.footer-social-item+.footer-social-item {
+    margin-left: 10px;
+}
+
+.footer-social-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b4a48;
+    fill: #FFFFFF;
+    
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: #2196F3;
 }
 
 /* Portfolio */
